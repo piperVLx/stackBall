@@ -1,0 +1,17 @@
+{
+"companyName": "game",
+"productName": "Lego Block Puzzle",
+"productVersion": "1.0",
+"dataUrl": "WebGLBuilds_LegoBlockPuzzle.data.unityweb",
+"asmCodeUrl": "WebGLBuilds_LegoBlockPuzzle.asm.code.unityweb",
+"asmMemoryUrl": "WebGLBuilds_LegoBlockPuzzle.asm.memory.unityweb",
+"asmFrameworkUrl": "WebGLBuilds_LegoBlockPuzzle.asm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.4.21f1"
+}
