@@ -46,7 +46,7 @@
         canvas.style.width = "400px";
         canvas.style.height = "600px";
        
-        
+        unityInstance.SetFullscreen(1);
       } else {
         canvas.style.width = "400px";
         canvas.style.height = "600px";
@@ -65,6 +65,13 @@
           alert(message);
         });
       };
+
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        canvas.style.width = "400px";
+        canvas.style.height = "600px";
+       
+        unityInstance.SetFullscreen(1);
+      }
       document.body.appendChild(script);
     </script>
   </body>
