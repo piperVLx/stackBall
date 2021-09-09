@@ -43,12 +43,9 @@
       var mobileWarning = document.querySelector("#unity-mobile-warning");
       
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        container.className = "unity-mobile";
-        config.devicePixelRatio = 1;
-        mobileWarning.style.display = "block";
-        setTimeout(() => {
-          mobileWarning.style.display = "none";
-        }, 5000);
+        canvas.style.width = "400px";
+        canvas.style.height = "600px";
+       
         unityInstance.SetFullscreen(1);
       } else {
         canvas.style.width = "400px";
