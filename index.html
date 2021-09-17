@@ -4,22 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Solitaire Battle</title>
+    <title>Stack Ball 3D</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
-
-  <style>
-
-  footer {
-  text-align: center;
-  padding: 500px;
-  background-color: black;
-  color: black;
-  }
-
-  </style>
-  <body class="dark" >
+  <body class="dark">
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas"></canvas>
     </div>
@@ -32,19 +21,19 @@
         <div class="spinner"></div>
       </div>
     </div>
-    <div id="unity-fullscreen-button" style="display: none;"  ></div>
+    <div id="unity-fullscreen-button" style="display: none;"></div>
     <script>
-      const hideFullScreenButton = "0";
+     // const hideFullScreenButton = "";
       const buildUrl = "Build";
-      const loaderUrl = buildUrl + "/sol.loader.js";
+      const loaderUrl = buildUrl + "/stackBall.loader.js";
       const config = {
-        dataUrl: buildUrl + "/sol.data",
-        frameworkUrl: buildUrl + "/sol.framework.js",
-        codeUrl: buildUrl + "/sol.wasm",
+        dataUrl: buildUrl + "/stackBall.data",
+        frameworkUrl: buildUrl + "/stackBall.framework.js",
+        codeUrl: buildUrl + "/stackBall.wasm",
         streamingAssetsUrl: "StreamingAssets",
-        companyName: "Piper",
-        productName: "Solitaire Battle",
-        productVersion: "1.0",
+        companyName: "DefaultCompany",
+        productName: "Stack Ball 3D",
+        productVersion: "0.1",
       };
 
       const container = document.querySelector("#unity-container");
@@ -73,17 +62,10 @@
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         container.className = "unity-mobile";
         config.devicePixelRatio = 2;
-        var docEl = document.documentElement;
-        var requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
-        var cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
-
-// Execute the variable on initalization
-        requestFullScreen.call(docEl);
-       // setTimeout(function(){ window.scrollTo(0, 1) }, 3000);
+        
+        setTimeout(function(){ window.scrollTo(0, 1) }, 3000);
 
       }
-      setTimeout(function(){ window.scrollTo(0, 100) }, 1500);
-
       loadingCover.style.display = "";
 
       const script = document.createElement("script");
@@ -96,24 +78,18 @@
         }).then((unityInstance) => {
           loadingCover.style.display = "none";
           if (canFullscreen) {
-            if (!hideFullScreenButton) {
+            /*if (!hideFullScreenButton) {
               fullscreenButton.style.display = "";
             }
             fullscreenButton.onclick = () => {
               unityInstance.SetFullscreen(1);
-            };
+            };*/
           }
         }).catch((message) => {
           alert(message);
         });
       };
-     
       document.body.appendChild(script);
     </script>
   </body>
-
-  <footer>
-    <p>Author: Piperplay<br>
-    
-  </footer>
 </html>
