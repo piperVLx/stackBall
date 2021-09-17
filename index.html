@@ -8,7 +8,18 @@
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
-  <body class="dark">
+
+  <style>
+
+  footer {
+  text-align: center;
+  padding: 500px;
+  background-color: black;
+  color: black;
+  }
+
+  </style>
+  <body class="dark" >
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas"></canvas>
     </div>
@@ -21,7 +32,7 @@
         <div class="spinner"></div>
       </div>
     </div>
-    <div id="unity-fullscreen-button" style="display: none;"></div>
+    <div id="unity-fullscreen-button" style="display: none;"  ></div>
     <script>
       const hideFullScreenButton = "0";
       const buildUrl = "Build";
@@ -92,4 +103,9 @@
       document.body.appendChild(script);
     </script>
   </body>
+
+  <footer>
+    <p>Author: Piperplay<br>
+    
+  </footer>
 </html>
