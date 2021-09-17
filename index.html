@@ -61,12 +61,11 @@
 
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         container.className = "unity-mobile";
-        config.devicePixelRatio = 1;
+        config.devicePixelRatio = 2;
         
-       // 
+        setTimeout(function(){ window.scrollTo(0, 1) }, 3000);
 
       }
-
       loadingCover.style.display = "";
 
       const script = document.createElement("script");
@@ -86,9 +85,6 @@
               unityInstance.SetFullscreen(1);
             };
           }
-
-         // setTimeout(function() {  alert("starting Game");/*window.scrollTo(0, 1);*/}, 1000);​
-          setTimeout(function(){ window.scrollTo(0, 1) }, 3000);
         }).catch((message) => {
           alert(message);
         });
