@@ -73,7 +73,12 @@
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         container.className = "unity-mobile";
         config.devicePixelRatio = 2;
-        
+        var docEl = document.documentElement;
+        var requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
+        var cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
+
+// Execute the variable on initalization
+        requestFullScreen.call(docEl);
        // setTimeout(function(){ window.scrollTo(0, 1) }, 3000);
 
       }
@@ -102,7 +107,7 @@
           alert(message);
         });
       };
-      document.body.requestFullscreen();
+     
       document.body.appendChild(script);
     </script>
   </body>
