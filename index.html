@@ -23,7 +23,7 @@
     </div>
     <div id="unity-fullscreen-button" style="display: none;"></div>
     <script>
-     // const hideFullScreenButton = "";
+      const hideFullScreenButton = "";
       const buildUrl = "Build";
       const loaderUrl = buildUrl + "/stackBall.loader.js";
       const config = {
@@ -31,7 +31,7 @@
         frameworkUrl: buildUrl + "/stackBall.framework.js",
         codeUrl: buildUrl + "/stackBall.wasm",
         streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
+        companyName: "Piper",
         productName: "Stack Ball 3D",
         productVersion: "0.1",
       };
@@ -61,10 +61,7 @@
 
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         container.className = "unity-mobile";
-        config.devicePixelRatio = 2;
-        
-        setTimeout(function(){ window.scrollTo(0, 1) }, 3000);
-
+        config.devicePixelRatio = 1;
       }
       loadingCover.style.display = "";
 
@@ -78,12 +75,12 @@
         }).then((unityInstance) => {
           loadingCover.style.display = "none";
           if (canFullscreen) {
-            /*if (!hideFullScreenButton) {
+            if (!hideFullScreenButton) {
               fullscreenButton.style.display = "";
             }
             fullscreenButton.onclick = () => {
               unityInstance.SetFullscreen(1);
-            };*/
+            };
           }
         }).catch((message) => {
           alert(message);
