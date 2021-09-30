@@ -25,11 +25,12 @@
     <script>
       const hideFullScreenButton = "0";
       const buildUrl = "Build";
-      const loaderUrl = buildUrl + "/stackBall.loader.js";
+      const loaderUrl = buildUrl + "/Webgl_Stackballpro.loader.js";
       const config = {
-        dataUrl: buildUrl + "/stackBall.data",
-        frameworkUrl: buildUrl + "/stackBall.framework.js",
-        codeUrl: buildUrl + "/stackBall.wasm",
+        dataUrl: buildUrl + "/Webgl_Stackballpro.data.unityweb",
+        frameworkUrl: buildUrl + "/Webgl_Stackballpro.framework.js.unityweb",
+        codeUrl: buildUrl + "/Webgl_Stackballpro.wasm.unityweb",
+        symbolsUrl: buildUrl + "/Webgl_Stackballpro.symbols.json.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Piper",
         productName: "Stack Ball 3D",
@@ -66,7 +67,7 @@
         setTimeout(function(){ window.scrollTo(0, 1) }, 3000);
 
       }
-      canvas.style.background = "url('" + buildUrl + "/stackBall.jpg') center / cover";
+      canvas.style.background = "url('" + buildUrl + "/Webgl_Stackballpro.jpg') center / cover";
       loadingCover.style.display = "";
 
       const script = document.createElement("script");
