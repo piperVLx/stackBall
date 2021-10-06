@@ -1,0 +1,16 @@
+{
+"companyName": "Piperplay",
+"productName": "Traffic Manager",
+"productVersion": "1.4.7",
+"dataUrl": "traffic.data.unityweb",
+"wasmCodeUrl": "traffic.wasm.code.unityweb",
+"wasmFrameworkUrl": "traffic.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.4.22f1"
+}
